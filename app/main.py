@@ -1,4 +1,5 @@
 from flask import Flask, jsonify
+import os
 
 app = Flask(__name__)
 
@@ -14,4 +15,5 @@ def root():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    host = os.getenv("HOST", "127.0.0.1")  # Only 0.0.0.0 in container
+    app.run(host=host, port=5000)
