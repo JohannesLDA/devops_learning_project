@@ -5,7 +5,6 @@ version = "0.1.0"
 [tool.ruff]
 line-length = 88
 target-version = "py311"
-ignore = ["S104"]
 
 [tool.ruff.lint]
 select = [
@@ -15,7 +14,7 @@ select = [
     "B",   # bugbear
     "S",   # bandit security
 ]
-ignore = ["S101"]  # allow assert in tests
+ignore = ["S101", "S104"]  # allow assert in tests, allow 0.0.0.0 binding
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
