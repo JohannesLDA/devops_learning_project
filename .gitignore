@@ -13,3 +13,10 @@ __pycache__/
 
 # Claude
 .claude/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars      # If contains secrets
+.terraform.lock.hcl
