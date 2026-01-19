@@ -20,3 +20,7 @@ __pycache__/
 *.tfstate.*
 *.tfvars      # If contains secrets
 .terraform.lock.hcl
+
+# LocalStack
+machine.json
+server.test.pem*

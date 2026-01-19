@@ -19,18 +19,3 @@ resource "aws_s3_bucket_versioning" "app_bucket_versioning" {
     status = "Enabled"
   }
 }
-
-# ECR repository for Docker images
-resource "aws_ecr_repository" "app_repo" {
-  name                 = "${var.app_name}-${var.environment}"
-  image_tag_mutability = "MUTABLE"
-
-  image_scanning_configuration {
-    scan_on_push = true
-  }
-
-  tags = {
-    Name        = var.app_name
-    Environment = var.environment
-  }
-}
