@@ -19,4 +19,3 @@ def test_root_returns_message():
 
     assert response.status_code == 200
     assert "message" in response.json
-
